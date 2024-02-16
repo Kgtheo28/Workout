@@ -3,10 +3,12 @@ package com.example.workout.ui.notifications
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workout.R
 import com.example.workout.database.data.Exercise
+import com.example.workout.database.data.databases.WeekdayWIthExercise
 
 class ListAdapter: RecyclerView.Adapter<ListAdapter.MyViewHolder>() {
 

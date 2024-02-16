@@ -1,9 +1,11 @@
 package com.example.workout.ui.notifications
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -48,13 +50,28 @@ class NotificationsFragment : Fragment() {
             adapter.setData(exercise)
         })
 
+        binding.button.setOnClickListener {
+            deleteAllUser()
+        }
+
+
 
 
         return root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    private fun deleteAllUser() {
+        val builder = AlertDialog.Builder(requireContext())
+        builder.setPositiveButton("Yes"){ _, _ ->
+            mUserViewModel.deleteAllExercise()
+            Toast.makeText(requireContext(), "Successfully deleted all data",
+                Toast.LENGTH_SHORT).show()
+        }
+        builder.setNegativeButton("No") {
+                _, _ ->
+
+        }
+        builder.setTitle("Delete all data ?")
+        builder.create().show()
     }
 }

@@ -25,41 +25,9 @@
                 android:textSize="30sp"
                 android:text="Workouts"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_gravity="center" />
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_margin="5dp"
-                app:cardBackgroundColor="@color/white"
-                app:cardCornerRadius="15dp"
-                app:cardElevation="5dp">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/workout_image1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        tools:src="@tools:sample/avatars" />
-
-                    <TextView
-                        android:id="@+id/workout_name1"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="4dp"
-                        android:text="Shoulder"
-                        android:textSize="30sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
 
 
             <androidx.cardview.widget.CardView
@@ -72,21 +40,13 @@
 
                 <ImageView
                     android:id="@+id/workout_men_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
                     android:alpha="0.9"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitXY"
-                    android:src="@drawable/img_man" />
+                    android:src="@drawable/bicep_dumbell_curls" />
 
-                <ImageView
-                    android:id="@+id/add_button"
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:layout_gravity="top|right"
-                    android:padding="10dp"
-                    android:src="@drawable/add_icon"
-                    app:tint="@color/white" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -96,16 +56,31 @@
                     android:gravity="right|center"
                     android:orientation="vertical">
 
-
+                    <ImageView
+                        android:id="@+id/add_button1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|right"
+                        android:padding="10dp"
+                        android:src="@drawable/add_icon" />
                     <TextView
-                        android:id="@+id/workout_name2"
+                        android:id="@+id/workout_name1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:gravity="right"
-                        android:text="shoulder exerise"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/bicep_curls"
+                        android:textSize="30sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
+
+                    <TextView
+                        android:id="@+id/equipment1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dumbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
 
                 </LinearLayout>
 
@@ -123,20 +98,14 @@
 
                 <ImageView
                     android:id="@+id/workout_girl_id2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
                     android:alpha="0.9"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitXY"
-                    android:src="@drawable/img_women" />
+                    android:src="@drawable/tricept_extension" />
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="top|left"
-                    android:padding="10dp"
-                    android:src="@drawable/dots"
-                    app:tint="@color/white" />
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -146,25 +115,31 @@
                     android:gravity="right|center"
                     android:orientation="vertical">
 
-
+                    <ImageView
+                        android:id="@+id/button_add2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|right"
+                        android:padding="10dp"
+                        android:src="@drawable/add_icon" />
                     <TextView
+                        android:id="@+id/workout_name2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
-                        android:text="Workout For Girl"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/tricep"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
 
                     <TextView
+                        android:id="@+id/equipment2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:gravity="right"
-
-                        android:text="Essential Muscle Building &amp; Diet \nPlan For Girls"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
+                        android:text="@string/dumbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
 
                 </LinearLayout>
 
@@ -180,12 +155,12 @@
 
                 <ImageView
                     android:id="@+id/workout_men_id3"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
                     android:alpha="0.9"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitXY"
-                    android:src="@drawable/img_man" />
+                    android:src="@drawable/shoulder_press" />
 
                 <ImageView
                     android:layout_width="40dp"
@@ -203,25 +178,32 @@
                     android:gravity="right|center"
                     android:orientation="vertical">
 
+                    <ImageView
+                        android:id="@+id/add_button3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|right"
+                        android:padding="10dp"
+                        android:src="@drawable/add_icon" />
 
                     <TextView
+                        android:id="@+id/workout_name3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
-                        android:text="Workout For Men"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/shoulder_press"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
 
                     <TextView
+                        android:id="@+id/equipment3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:gravity="right"
-
-                        android:text="Essential Muscle Building For \nMen"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
+                        android:text="@string/dumbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
 
                 </LinearLayout>
 
@@ -237,20 +219,13 @@
 
                 <ImageView
                     android:id="@+id/workout_girl_id4"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
                     android:alpha="0.9"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitXY"
-                    android:src="@drawable/img_women" />
+                    android:src="@drawable/barbell_bench_press" />
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="top|left"
-                    android:padding="10dp"
-                    android:src="@drawable/dots"
-                    app:tint="@color/white" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -260,25 +235,32 @@
                     android:gravity="right|center"
                     android:orientation="vertical">
 
+                    <ImageView
+                        android:id="@+id/add_button4"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|right"
+                        android:padding="10dp"
+                        android:src="@drawable/add_icon" />
 
                     <TextView
+                        android:id="@+id/workout_name4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
-                        android:text="Workout For Girl"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/bench_press"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
 
                     <TextView
+                        android:id="@+id/equipment4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:gravity="right"
-
-                        android:text="Essential Muscle Building &amp; Diet \nPlan For Girls"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
+                        android:text="@string/barbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
 
                 </LinearLayout>
 
@@ -294,20 +276,14 @@
 
                 <ImageView
                     android:id="@+id/workout_men_id5"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
                     android:alpha="0.9"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitXY"
-                    android:src="@drawable/img_man" />
+                    android:src="@drawable/bent_over_row" />
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="top|left"
-                    android:padding="10dp"
-                    android:src="@drawable/smile"
-                    app:tint="@color/white" />
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -318,24 +294,31 @@
                     android:orientation="vertical">
 
 
+                    <ImageView
+                        android:id="@+id/add_button5"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|right"
+                        android:padding="10dp"
+                        android:src="@drawable/add_icon" />
                     <TextView
+                        android:id="@+id/workout_name5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
-                        android:text="Workout For Men"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/bent_over_row"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
 
                     <TextView
+                        android:id="@+id/equipment5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:gravity="right"
-
-                        android:text="Essential Muscle Building For \nMen"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
+                        android:text="@string/barbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
 
                 </LinearLayout>
 
@@ -351,20 +334,13 @@
 
                 <ImageView
                     android:id="@+id/workout_girl_id6"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
                     android:alpha="0.9"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitXY"
-                    android:src="@drawable/img_women" />
+                    android:src="@drawable/squat" />
 
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="top|left"
-                    android:padding="10dp"
-                    android:src="@drawable/dots"
-                    app:tint="@color/white" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -374,25 +350,148 @@
                     android:gravity="right|center"
                     android:orientation="vertical">
 
+                    <ImageView
+                        android:id="@+id/add_button6"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|right"
+                        android:padding="10dp"
+                        android:src="@drawable/add_icon" />
 
                     <TextView
+                        android:id="@+id/workout_name6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-
-                        android:text="Workout For Girl"
-                        android:textColor="@color/white"
-                        android:textSize="20sp"
-                        android:textStyle="bold" />
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/squat"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
 
                     <TextView
+                        android:id="@+id/equipment6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="5dp"
-                        android:gravity="right"
+                        android:text="@string/barbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
 
-                        android:text="Essential Muscle Building &amp; Diet \nPlan For Girls"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/workout_girl_id7"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
+                    android:alpha="0.9"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/romanian_deadlift" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/add_button7"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|right"
+                        android:padding="10dp"
+                        android:src="@drawable/add_icon" />
+
+                    <TextView
+                        android:id="@+id/workout_name7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/romanian_deadlift"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
+
+                    <TextView
+                        android:id="@+id/equipment7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/barbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/workout_girl_id8"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
+                    android:alpha="0.9"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/calf_raise" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/add_button8"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|right"
+                        android:padding="10dp"
+                        android:src="@drawable/add_icon" />
+
+                    <TextView
+                        android:id="@+id/workout_name8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/calf_raise"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
+
+                    <TextView
+                        android:id="@+id/equipment8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dumbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
 
                 </LinearLayout>
 

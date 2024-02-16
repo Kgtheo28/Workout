@@ -6,4 +6,20 @@
     <string name="plash_screen_title">GYM ROOM\n</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Exercise Name -->
+    <string name="bicep_curls">Bicep Curls</string>
+    <string name="shoulder_press">Shoulder Press</string>
+    <string name="bench_press">Bench Press</string>
+    <string name="bent_over_row">Bentover Row</string>
+    <string name="tricep">Triceps Extension</string>
+    <string name="lunge">Front Lunge</string>
+    <string name="squat">Squat</string>
+    <string name="romanian_deadlift">Romanian Deadlift</string>
+    <string name="calf_raise">Calf Raise</string>
+
+    <!-- Equipment -->
+    <string name="dumbell">Dumbbell</string>
+    <string name="barbell">Barbell</string>
+    <string name="leg_press">Leg Press</string>
 </resources>
