@@ -47,8 +47,8 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
 
 
         addBtn.setOnClickListener {
-            addData()
-            //addData2()
+            //addData()
+            addData2()
 
         }
 
@@ -74,7 +74,7 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
             val exercise = Exercise(workoutName, equipment, workoutId)
             mUserViewModel.addExercise(exercise)
 
-            val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(workoutId, weekdayId, workoutName)
+            val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(workoutId, weekdayId)
             mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
 
             Toast.makeText(this, "Successfully added", Toast.LENGTH_LONG).show()
@@ -99,7 +99,7 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
             } else if (tuesdayCheckBox.isChecked) {
                 addDataForWorkout(workoutName2, equipment2, 2, 2)
             } else if (wednesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName2, equipment2, 2, 3)
+                addDataForWorkout(workoutName1, equipment1, 1, 3)
             }
             else {
                 Toast.makeText(this, "You need to pick a weekday", Toast.LENGTH_LONG).show()
@@ -109,6 +109,7 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
         }
     }
 
+    /*
 
     private fun addData() {
         // First workout properties
@@ -124,7 +125,6 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
         // Weekday Check Boxes
         val mondayCheckBox = binding.checkBoxMonday
         val tuesdayCheckBox = binding.checkBoxTuesday
-        val wednesdayCheckBox = binding.checkBoxWednesday
 
         // If First Workout is Selected
         if(checkBoxWorkout1.isChecked){
@@ -142,7 +142,7 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
                 mUserViewModel.addExercise(exercise)
 
                 // Adding Cross reference to the two columns
-                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(1,1, workoutName)
+                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(1,1)
                 mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
 
                 // Moving to the Main Activity after the process is done
@@ -163,29 +163,11 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
                 mUserViewModel.addExercise(exercise)
 
                 // Adding Cross reference to the two columns
-                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(1,2, workoutName)
+                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(1,2)
                 mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
 
                 // Moving to the Main Activity after the process is done
                 Toast.makeText(this, "Successfully  in Tuesday", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this@CustomMultiSelectionDialog, MainActivity::class.java))
-            } else if(wednesdayCheckBox.isChecked){
-                //adding Weekday to database
-                val weekday = Weekday(wednesdayCheckBox.text.toString(), 3)
-
-                mUserViewModel.addWeekday(weekday)
-
-                // Adding Exercise to database
-                val exercise = Exercise(workoutName, equipment, 1)
-
-                mUserViewModel.addExercise(exercise)
-
-                // Adding Cross reference to the two columns
-                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(1,3, workoutName)
-                mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
-
-                // Moving to the Main Activity after the process is done
-                Toast.makeText(this, "Successfully  in Wednesday", Toast.LENGTH_LONG).show()
                 startActivity(Intent(this@CustomMultiSelectionDialog, MainActivity::class.java))
             }
 
@@ -209,7 +191,7 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
                 mUserViewModel.addExercise(exercise)
 
                 // Adding Cross reference to the two columns
-                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(2,1, workoutName2)
+                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(2,1)
                 mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
 
                 // Moving to the Main Activity after the process is done
@@ -230,25 +212,7 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
                 mUserViewModel.addExercise(exercise)
 
                 // Adding Cross reference to the two columns
-                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(2,2, workoutName2)
-                mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
-
-                // Moving to the Main Activity after the process is done
-                Toast.makeText(this, "Successfully  in Tuesday", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this@CustomMultiSelectionDialog, MainActivity::class.java))
-            } else if(wednesdayCheckBox.isChecked){
-                //adding Weekday to database
-                val weekday = Weekday(wednesdayCheckBox.text.toString(), 3)
-
-                mUserViewModel.addWeekday(weekday)
-
-                // Adding Exercise to database
-                val exercise = Exercise(workoutName2, equipment2, 2)
-
-                mUserViewModel.addExercise(exercise)
-
-                // Adding Cross reference to the two columns
-                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(2,3, workoutName2)
+                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(2,2)
                 mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
 
                 // Moving to the Main Activity after the process is done
@@ -260,11 +224,14 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
                 Toast.makeText(this, "you need to pick a weekday", Toast.LENGTH_LONG).show()
             }
 
+
         }else{
             Toast.makeText(this, "you need to pick an Exercise", Toast.LENGTH_LONG).show()
         }
 
     }
+
+     */
 }
 
 
