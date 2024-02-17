@@ -64,6 +64,26 @@ interface ExerciseWeekdayCrossRefDao {
     suspend fun addCrossRef(exerciseWeekdayCrossRef: ExerciseWeekdayCrossRef)
 
     @Transaction
-    @Query("SELECT * FROM exercise_weekday_cross WHERE weekdayId = id")
-    fun getExerciseWeekdayCross(): List<ExerciseWeekdayCrossRef>
+    @Query("SELECT * FROM exercise_weekday_cross WHERE weekdayId = 1")
+    fun getExerciseWeekdayCrossMon(): LiveData<List<ExerciseWeekdayCrossRef>>
+
+    @Transaction
+    @Query("SELECT * FROM exercise_weekday_cross WHERE weekdayId = 2")
+    fun getExerciseWeekdayCrossTue(): LiveData<List<ExerciseWeekdayCrossRef>>
+
+    @Transaction
+    @Query("SELECT * FROM exercise_weekday_cross WHERE weekdayId = 3")
+    fun getExerciseWeekdayCrossWed(): LiveData<List<ExerciseWeekdayCrossRef>>
+
+    @Transaction
+    @Query("SELECT * FROM exercise_weekday_cross WHERE weekdayId = 4")
+    fun getExerciseWeekdayCrossThu(): LiveData<List<ExerciseWeekdayCrossRef>>
+
+    @Transaction
+    @Query("SELECT * FROM exercise_weekday_cross WHERE weekdayId = 5")
+    fun getExerciseWeekdayCrossFri(): LiveData<List<ExerciseWeekdayCrossRef>>
+
+    @Transaction
+    @Query("SELECT * FROM exercise_weekday_cross WHERE weekdayId = 6")
+    fun getExerciseWeekdayCrossSat(): LiveData<List<ExerciseWeekdayCrossRef>>
 }

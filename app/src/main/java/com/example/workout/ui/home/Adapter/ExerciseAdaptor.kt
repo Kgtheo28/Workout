@@ -14,7 +14,7 @@ import com.example.workout.database.data.databases.WeekdayWIthExercise
 // ExerciseAdapter.kt
 class ExerciseAdapter: RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>() {
 
-    private var exerciseList = emptyList<WeekdayWIthExercise>()
+    private var exerciseList = emptyList<ExerciseWeekdayCrossRef>()
 
     class ExerciseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     }
@@ -33,13 +33,14 @@ class ExerciseAdapter: RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>(
 
          */
 
-        holder.itemView.findViewById<TextView>(R.id.tv_body_part).text = currentItem.weekday.weekdayName
-        holder.itemView.findViewById<TextView>(R.id.tv_id).text = currentItem.weekday.weekdayId.toString()
+        //holder.itemView.findViewById<TextView>(R.id.tv_body_part).text = currentItem.weekdayId.toString()
+        //holder.itemView.findViewById<TextView>(R.id.tv_id).text = currentItem.id.toString()
+        holder.itemView.findViewById<TextView>(R.id.tv_exercise_name).text = currentItem.exerciseName
     }
 
     override fun getItemCount() = exerciseList.size
 
-    fun setData(exercise: List<WeekdayWIthExercise>){
+    fun setData(exercise: List<ExerciseWeekdayCrossRef>){
         this.exerciseList = exercise
         notifyDataSetChanged()
     }

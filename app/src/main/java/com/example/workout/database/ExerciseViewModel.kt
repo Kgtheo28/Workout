@@ -22,6 +22,12 @@ class ExerciseViewModel(application: Application): AndroidViewModel(application)
     val readWeekdayWIthExercise2: LiveData<List<WeekdayWIthExercise>>
     val readWeekdayWIthExercise3: LiveData<List<WeekdayWIthExercise>>
 
+    val getExerciseWeekdayCrossMon: LiveData<List<ExerciseWeekdayCrossRef>>
+    val getExerciseWeekdayCrossTue: LiveData<List<ExerciseWeekdayCrossRef>>
+    val getExerciseWeekdayCrossWed: LiveData<List<ExerciseWeekdayCrossRef>>
+
+
+
     private val repository: ExerciseRepository
 
     init {
@@ -36,6 +42,11 @@ class ExerciseViewModel(application: Application): AndroidViewModel(application)
         readWeekdayWIthExercise = repository.readWeekdayWithExercise
         readWeekdayWIthExercise2 = repository.readWeekdayWithExercise2
         readWeekdayWIthExercise3 = repository.readWeekdayWithExercise3
+
+        getExerciseWeekdayCrossMon = repository.getExerciseWeekdayCrossMon
+        getExerciseWeekdayCrossTue = repository.getExerciseWeekdayCrossTue
+        getExerciseWeekdayCrossWed = repository.getExerciseWeekdayCrossWed
+
     }
 
     fun addExercise(exercise: Exercise) {

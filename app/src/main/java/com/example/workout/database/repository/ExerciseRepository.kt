@@ -21,6 +21,13 @@ class ExerciseRepository(
     val readWeekdayWithExercise2: LiveData<List<WeekdayWIthExercise>> = weekdayDao.readWeekdayWithExercise2()
     val readWeekdayWithExercise3: LiveData<List<WeekdayWIthExercise>> = weekdayDao.readWeekdayWithExercise3()
 
+    // get Data from weekday
+    val getExerciseWeekdayCrossMon: LiveData<List<ExerciseWeekdayCrossRef>> = exerciseWeekdayCrossRefDao.getExerciseWeekdayCrossMon()
+    val getExerciseWeekdayCrossTue: LiveData<List<ExerciseWeekdayCrossRef>> = exerciseWeekdayCrossRefDao.getExerciseWeekdayCrossTue()
+    val getExerciseWeekdayCrossWed: LiveData<List<ExerciseWeekdayCrossRef>> = exerciseWeekdayCrossRefDao.getExerciseWeekdayCrossWed()
+
+
+
     suspend fun addExercise(exercise: Exercise){
         exerciseDao.addExercise(exercise)
     }

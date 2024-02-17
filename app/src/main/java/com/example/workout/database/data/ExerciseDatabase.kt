@@ -30,7 +30,7 @@ abstract class ExerciseDatabase: RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     ExerciseDatabase::class.java,
-                    "exercise_database"
+                    "exercise_database1"
                 ).build()
                 INSTANCE= instance
                 return instance

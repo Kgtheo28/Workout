@@ -49,6 +49,7 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
+
         binding.sundayBtn.setOnClickListener {
             //RecyclerView
             val adapter = HomeCalenderAdaptor()
@@ -71,8 +72,8 @@ class HomeFragment : Fragment() {
 
             //mUserViewModel
             mUserViewModel = ViewModelProvider(this).get(ExerciseViewModel::class.java)
-            mUserViewModel.readWeekdayWIthExercise.observe(viewLifecycleOwner, Observer { weekdayWithExercise ->
-                adapter.setData(weekdayWithExercise)
+            mUserViewModel.getExerciseWeekdayCrossMon.observe(viewLifecycleOwner, Observer { exerciseWeekdayCrossRef ->
+                adapter.setData(exerciseWeekdayCrossRef)
             })
         }
 
@@ -84,8 +85,8 @@ class HomeFragment : Fragment() {
 
             //mUserViewModel
             mUserViewModel = ViewModelProvider(this).get(ExerciseViewModel::class.java)
-            mUserViewModel.readWeekdayWIthExercise2.observe(viewLifecycleOwner, Observer { weekdayWithExercise2 ->
-                adapter.setData(weekdayWithExercise2)
+            mUserViewModel.getExerciseWeekdayCrossTue.observe(viewLifecycleOwner, Observer { exerciseWeekdayCrossRef ->
+                adapter.setData(exerciseWeekdayCrossRef)
             })
         }
 
@@ -97,8 +98,8 @@ class HomeFragment : Fragment() {
 
             //mUserViewModel
             mUserViewModel = ViewModelProvider(this).get(ExerciseViewModel::class.java)
-            mUserViewModel.readWeekdayWIthExercise3.observe(viewLifecycleOwner, Observer { weekdayWithExercise2 ->
-                adapter.setData(weekdayWithExercise2)
+            mUserViewModel.getExerciseWeekdayCrossWed.observe(viewLifecycleOwner, Observer { exerciseWeekdayCrossRef ->
+                adapter.setData(exerciseWeekdayCrossRef)
             })
         }
 

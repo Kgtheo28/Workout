@@ -27,5 +27,6 @@ data class Weekday(
 @Entity(tableName = "exercise_weekday_cross", primaryKeys = ["id", "weekdayId"])
 data class ExerciseWeekdayCrossRef(
     val id: Int,
-    val weekdayId: Int
+    val weekdayId: Int,
+    val exerciseName: String
 )
