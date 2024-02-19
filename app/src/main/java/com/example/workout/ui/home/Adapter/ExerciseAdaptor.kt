@@ -20,7 +20,7 @@ class ExerciseAdapter: RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ExerciseViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.custom_row, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.calender_card_layout, parent, false)
         return ExerciseViewHolder(itemView)
     }
 
@@ -35,7 +35,7 @@ class ExerciseAdapter: RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>(
 
         //holder.itemView.findViewById<TextView>(R.id.tv_body_part).text = currentItem.weekdayId.toString()
         //holder.itemView.findViewById<TextView>(R.id.tv_id).text = currentItem.id.toString()
-        holder.itemView.findViewById<TextView>(R.id.tv_exercise_name).text = currentItem.exerciseName
+        holder.itemView.findViewById<TextView>(R.id.schedule_body_part).text = currentItem.exerciseName
     }
 
     override fun getItemCount() = exerciseList.size

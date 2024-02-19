@@ -26,10 +26,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:textSize="30sp"
-                android:text="Workouts"
+                android:text="@string/workout_schedule"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:layout_gravity="center" />
+
+
+            <!-- Exercise CardViews -->
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView_1"
@@ -93,8 +96,8 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardView_2"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:layout_margin="5dp"
@@ -102,16 +105,15 @@
                 app:cardCornerRadius="15dp"
                 app:cardElevation="5dp">
 
-
-
                 <ImageView
-                    android:id="@+id/workout_men_id_2"
+                    android:id="@+id/workout_girl_id2"
                     android:layout_width="141dp"
                     android:layout_height="133dp"
                     android:alpha="0.9"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     android:scaleType="fitXY"
-                    android:src="@drawable/bicep_dumbell_curls" />
+                    android:src="@drawable/tricept_extension" />
+
 
 
                 <LinearLayout
@@ -132,13 +134,130 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="4dp"
-                        android:text="@string/shoulder_press"
+                        android:text="@string/tricep"
                         android:textSize="25sp"
                         android:textColor="@color/black"
                         android:layout_gravity="top|right" />
 
                     <TextView
                         android:id="@+id/equipment2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dumbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/workout_men_id3"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
+                    android:alpha="0.9"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/shoulder_press" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top|left"
+                    android:padding="10dp"
+                    android:src="@drawable/smile"
+                    app:tint="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/workout_name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/shoulder_press"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
+
+                    <TextView
+                        android:id="@+id/equipment3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dumbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/workout_girl_id4"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
+                    android:alpha="0.9"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/barbell_bench_press" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/workout_name4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/bench_press"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
+
+                    <TextView
+                        android:id="@+id/equipment4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/barbell"
@@ -148,39 +267,289 @@
 
                 </LinearLayout>
 
-                <RadioGroup
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+            </androidx.cardview.widget.CardView>
 
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/workout_men_id5"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
+                    android:alpha="0.9"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/bent_over_row" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center"
+                    android:orientation="vertical">
+
+
+                    <CheckBox
+                        android:id="@+id/checkbox_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:id="@+id/workout_name5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/bent_over_row"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
+
+                    <TextView
+                        android:id="@+id/equipment5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/barbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/add_btn"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Add Exercise" />
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
 
+                <ImageView
+                    android:id="@+id/workout_girl_id6"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
+                    android:alpha="0.9"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/squat" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/workout_name6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/squat"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
+
+                    <TextView
+                        android:id="@+id/equipment6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/barbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/workout_girl_id7"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
+                    android:alpha="0.9"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/romanian_deadlift" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/workout_name7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/romanian_deadlift"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
+
+                    <TextView
+                        android:id="@+id/equipment7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/barbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_margin="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp"
+                app:cardElevation="5dp">
+
+                <ImageView
+                    android:id="@+id/workout_girl_id8"
+                    android:layout_width="141dp"
+                    android:layout_height="133dp"
+                    android:alpha="0.9"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/calf_raise" />
+
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:gravity="right|center"
+                    android:orientation="vertical">
+
+                    <CheckBox
+                        android:id="@+id/checkbox_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/workout_name8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:text="@string/calf_raise"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="top|right" />
+
+                    <TextView
+                        android:id="@+id/equipment8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dumbell"
+                        android:textSize="25sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center|right" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <!-- WEEKDAY Checboxes -->
             <CheckBox
                 android:id="@+id/checkBox_monday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Monday"
+                android:text="@string/monday"
                 android:textColor="@color/black"/>
 
             <CheckBox
                 android:id="@+id/checkBox_tuesday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tuesday"
+                android:text="@string/tuesday"
                 android:textColor="@color/black"/>
 
             <CheckBox
                 android:id="@+id/checkBox_wednesday"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Wednesday"
+                android:text="@string/wednesday"
                 android:textColor="@color/black"/>
+
+            <CheckBox
+                android:id="@+id/checkBox_thursday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thursday"
+                android:textColor="@color/black"/>
+
+            <CheckBox
+                android:id="@+id/checkBox_friday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/friday"
+                android:textColor="@color/black"/>
+
+            <CheckBox
+                android:id="@+id/checkBox_sarturday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/saturday"
+                android:textColor="@color/black"/>
+
+            <CheckBox
+                android:id="@+id/checkBox_sunday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sunday"
+                android:textColor="@color/black"/>
+
+
+            <Button
+                android:id="@+id/add_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Exercise" />
 
         </LinearLayout>
 

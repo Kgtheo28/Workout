@@ -86,4 +86,8 @@ interface ExerciseWeekdayCrossRefDao {
     @Transaction
     @Query("SELECT * FROM exercise_weekday_cross WHERE weekdayId = 6")
     fun getExerciseWeekdayCrossSat(): LiveData<List<ExerciseWeekdayCrossRef>>
+
+    @Transaction
+    @Query("SELECT * FROM exercise_weekday_cross WHERE weekdayId = 7")
+    fun getExerciseWeekdayCrossSun(): LiveData<List<ExerciseWeekdayCrossRef>>
 }

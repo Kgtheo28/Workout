@@ -28,5 +28,6 @@ data class Weekday(
 data class ExerciseWeekdayCrossRef(
     val id: Int,
     val weekdayId: Int,
-    val exerciseName: String
+    val exerciseName: String,
+    val equipment: String
 )

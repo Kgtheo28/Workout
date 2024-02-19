@@ -25,6 +25,10 @@ class ExerciseViewModel(application: Application): AndroidViewModel(application)
     val getExerciseWeekdayCrossMon: LiveData<List<ExerciseWeekdayCrossRef>>
     val getExerciseWeekdayCrossTue: LiveData<List<ExerciseWeekdayCrossRef>>
     val getExerciseWeekdayCrossWed: LiveData<List<ExerciseWeekdayCrossRef>>
+    val getExerciseWeekdayCrossThu: LiveData<List<ExerciseWeekdayCrossRef>>
+    val getExerciseWeekdayCrossFri: LiveData<List<ExerciseWeekdayCrossRef>>
+    val getExerciseWeekdayCrossSat: LiveData<List<ExerciseWeekdayCrossRef>>
+    val getExerciseWeekdayCrossSun: LiveData<List<ExerciseWeekdayCrossRef>>
 
 
 
@@ -46,7 +50,10 @@ class ExerciseViewModel(application: Application): AndroidViewModel(application)
         getExerciseWeekdayCrossMon = repository.getExerciseWeekdayCrossMon
         getExerciseWeekdayCrossTue = repository.getExerciseWeekdayCrossTue
         getExerciseWeekdayCrossWed = repository.getExerciseWeekdayCrossWed
-
+        getExerciseWeekdayCrossThu = repository.getExerciseWeekdayCrossThu
+        getExerciseWeekdayCrossFri = repository.getExerciseWeekdayCrossFri
+        getExerciseWeekdayCrossSat = repository.getExerciseWeekdayCrossSat
+        getExerciseWeekdayCrossSun = repository.getExerciseWeekdayCrossSun
     }
 
     fun addExercise(exercise: Exercise) {

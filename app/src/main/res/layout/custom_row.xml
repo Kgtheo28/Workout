@@ -7,39 +7,6 @@
     android:padding="24sp"
     android:id="@+id/row_layout">
 
-    <!--
-    <TextView
-        android:id="@+id/tv_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="76dp"
-        android:text="(1)"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toStartOf="@+id/tv_body_part"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_exercise_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="48dp"
-        android:text="Exercise type"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_body_part" />
-
-    <TextView
-        android:id="@+id/tv_body_part"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="92dp"
-        android:text="Body Part"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" /> -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -84,24 +51,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="(1)"
+                        android:visibility="gone"
                         android:textColor="@color/black"
                         android:textSize="30sp" />
 
                     <TextView
-                        android:id="@+id/tv_body_part"
+                        android:id="@+id/tv_exercise_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center|right"
-                        android:text="@string/dumbell"
+                        android:text="@string/bicep_curls"
                         android:textColor="@color/black"
                         android:textSize="30sp" />
                     <TextView
-                        android:id="@+id/tv_exercise_name"
+                        android:id="@+id/tv_equipment"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|right"
                         android:layout_marginEnd="4dp"
-                        android:text="@string/bicep_curls"
+                        android:text="@string/dumbell"
                         android:textColor="@color/black"
                         android:textSize="25sp" />
 

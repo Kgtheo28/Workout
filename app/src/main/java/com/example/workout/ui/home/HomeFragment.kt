@@ -24,11 +24,13 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
+
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
 
     private lateinit var mUserViewModel: ExerciseViewModel
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -49,20 +51,10 @@ class HomeFragment : Fragment() {
             startActivity(intent)
         }
 
-
-        binding.sundayBtn.setOnClickListener {
-            //RecyclerView
-            val adapter = HomeCalenderAdaptor()
-            val recyclerView = binding.calenderRecyclerView
-            recyclerView.adapter = adapter
-            recyclerView.layoutManager = LinearLayoutManager(requireContext())
-
-            //mUserViewModel
-            mUserViewModel = ViewModelProvider(this).get(ExerciseViewModel::class.java)
-            mUserViewModel.readAllData.observe(viewLifecycleOwner, Observer { exercise ->
-                adapter.setData(exercise)
-            })
+        binding.tvMonthYear.setOnClickListener {
+            //toggleRecyclerViewVisibility()
         }
+
 
         binding.mondayBtn.setOnClickListener {
             val adapter = ExerciseAdapter()
@@ -75,6 +67,7 @@ class HomeFragment : Fragment() {
             mUserViewModel.getExerciseWeekdayCrossMon.observe(viewLifecycleOwner, Observer { exerciseWeekdayCrossRef ->
                 adapter.setData(exerciseWeekdayCrossRef)
             })
+            toggleRecyclerViewVisibility()
         }
 
         binding.tuesdayBtn.setOnClickListener {
@@ -88,6 +81,7 @@ class HomeFragment : Fragment() {
             mUserViewModel.getExerciseWeekdayCrossTue.observe(viewLifecycleOwner, Observer { exerciseWeekdayCrossRef ->
                 adapter.setData(exerciseWeekdayCrossRef)
             })
+            toggleRecyclerViewVisibility()
         }
 
         binding.wednesdayBtn.setOnClickListener {
@@ -101,6 +95,63 @@ class HomeFragment : Fragment() {
             mUserViewModel.getExerciseWeekdayCrossWed.observe(viewLifecycleOwner, Observer { exerciseWeekdayCrossRef ->
                 adapter.setData(exerciseWeekdayCrossRef)
             })
+            toggleRecyclerViewVisibility()
+        }
+
+        binding.thursdayBtn.setOnClickListener {
+            val adapter = ExerciseAdapter()
+            val recyclerView = binding.calenderRecyclerView
+            recyclerView.adapter = adapter
+            recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+            //mUserViewModel
+            mUserViewModel = ViewModelProvider(this).get(ExerciseViewModel::class.java)
+            mUserViewModel.getExerciseWeekdayCrossThu.observe(viewLifecycleOwner, Observer { exerciseWeekdayCrossRef ->
+                adapter.setData(exerciseWeekdayCrossRef)
+            })
+            toggleRecyclerViewVisibility()
+        }
+
+        binding.fridayBtn.setOnClickListener {
+            val adapter = ExerciseAdapter()
+            val recyclerView = binding.calenderRecyclerView
+            recyclerView.adapter = adapter
+            recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+            //mUserViewModel
+            mUserViewModel = ViewModelProvider(this).get(ExerciseViewModel::class.java)
+            mUserViewModel.getExerciseWeekdayCrossFri.observe(viewLifecycleOwner, Observer { exerciseWeekdayCrossRef ->
+                adapter.setData(exerciseWeekdayCrossRef)
+            })
+            toggleRecyclerViewVisibility()
+        }
+
+        binding.saturdayBtn.setOnClickListener {
+            val adapter = ExerciseAdapter()
+            val recyclerView = binding.calenderRecyclerView
+            recyclerView.adapter = adapter
+            recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+            //mUserViewModel
+            mUserViewModel = ViewModelProvider(this).get(ExerciseViewModel::class.java)
+            mUserViewModel.getExerciseWeekdayCrossSat.observe(viewLifecycleOwner, Observer { exerciseWeekdayCrossRef ->
+                adapter.setData(exerciseWeekdayCrossRef)
+            })
+            toggleRecyclerViewVisibility()
+        }
+
+        binding.sundayBtn.setOnClickListener {
+            val adapter = ExerciseAdapter()
+            val recyclerView = binding.calenderRecyclerView
+            recyclerView.adapter = adapter
+            recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+            //mUserViewModel
+            mUserViewModel = ViewModelProvider(this).get(ExerciseViewModel::class.java)
+            mUserViewModel.getExerciseWeekdayCrossSun.observe(viewLifecycleOwner, Observer { exerciseWeekdayCrossRef ->
+                adapter.setData(exerciseWeekdayCrossRef)
+            })
+            toggleRecyclerViewVisibility()
         }
 
         binding.workoutMenId.setOnClickListener {
@@ -109,7 +160,16 @@ class HomeFragment : Fragment() {
         return root
     }
 
+    private fun toggleRecyclerViewVisibility() {
 
+        val nestedRecyclerView = binding.nestedRecyclerView
+
+        if(nestedRecyclerView.visibility == View.VISIBLE){
+            nestedRecyclerView.visibility = View.GONE
+        }else {
+            nestedRecyclerView.visibility = View.VISIBLE
+        }
+    }
 
 
 }

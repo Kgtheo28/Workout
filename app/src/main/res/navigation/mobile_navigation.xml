@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_navigation_home_to_customMultiSelectionDialog"
             app:destination="@id/customMultiSelectionDialog" />
+        <action
+            android:id="@+id/action_navigation_home_to_nutritionFragment"
+            app:destination="@id/navigation_nutrition" />
     </fragment>
 
     <fragment
@@ -68,4 +71,14 @@
         android:name="com.example.workout.ui.home.CustomMultiSelectionDialog"
         android:label="activity_custom_multi_selection_dialog"
         tools:layout="@layout/activity_custom_multi_selection_dialog" />
+    <fragment
+        android:id="@+id/navigation_nutrition"
+        android:name="com.example.workout.ui.nutrition.NutritionFragment"
+        android:label="fragment_nutrition"
+        tools:layout="@layout/fragment_nutrition" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.workout.ui.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
