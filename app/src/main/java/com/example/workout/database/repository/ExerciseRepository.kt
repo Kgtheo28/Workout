@@ -10,6 +10,15 @@ class ExerciseRepository(
 
     val readAllData: LiveData<List<Exercise>> = exerciseDao.readAllData()
 
+    // Filter Exercises by Weekday
+    val readMondayData: LiveData<List<Exercise>> = exerciseDao.readMondayData()
+    val readTuesdayData: LiveData<List<Exercise>> = exerciseDao.readTuesdayData()
+    val readWednesdayData: LiveData<List<Exercise>> = exerciseDao.readWednesdayData()
+    val readThursdayData: LiveData<List<Exercise>> = exerciseDao.readThursdayData()
+    val readFridayData: LiveData<List<Exercise>> = exerciseDao.readFridayData()
+    val readSaturdayData: LiveData<List<Exercise>> = exerciseDao.readSaturdayData()
+    val readSundayData: LiveData<List<Exercise>> = exerciseDao.readSundayData()
+
     suspend fun addExercise(exercise: Exercise){
         exerciseDao.addExercise(exercise)
     }

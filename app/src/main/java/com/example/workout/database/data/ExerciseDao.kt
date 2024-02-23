@@ -27,4 +27,29 @@ interface ExerciseDao {
     @Query("SELECT * FROM workout_table ORDER BY id ASC")
     fun readAllData(): LiveData<List<Exercise>>
 
+    //filtering data by weekday
+
+    @Query("SELECT * FROM workout_table WHERE weekdayName = 'Monday'")
+    fun readMondayData(): LiveData<List<Exercise>>
+
+    @Query("SELECT * FROM workout_table WHERE weekdayName = 'Tuesday'")
+    fun readTuesdayData(): LiveData<List<Exercise>>
+
+    @Query("SELECT * FROM workout_table WHERE weekdayName = 'Wednesday'")
+    fun readWednesdayData(): LiveData<List<Exercise>>
+
+    @Query("SELECT * FROM workout_table WHERE weekdayName = 'Thursday'")
+    fun readThursdayData(): LiveData<List<Exercise>>
+
+    @Query("SELECT * FROM workout_table WHERE weekdayName = 'Friday'")
+    fun readFridayData(): LiveData<List<Exercise>>
+
+    @Query("SELECT * FROM workout_table WHERE weekdayName = 'Saturday'")
+    fun readSaturdayData(): LiveData<List<Exercise>>
+
+    @Query("SELECT * FROM workout_table WHERE weekdayName = 'Sunday'")
+    fun readSundayData(): LiveData<List<Exercise>>
+
+
+
 }
