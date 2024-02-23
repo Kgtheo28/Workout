@@ -1,20 +1,10 @@
-package com.example.workout
+package com.example.workout.activities
 
 import android.content.Intent
-import android.os.Build
 import android.os.Bundle
-import android.view.Window
-import android.view.WindowInsets
-import android.view.WindowManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.example.workout.activities.ExerciseActivity
-import com.example.workout.activities.NutritionActivity
-import com.example.workout.activities.ProfileActivity
+import com.example.workout.R
 import com.example.workout.databinding.ActivityMainBinding
 import com.example.workout.ui.home.CustomMultiSelectionDialog
 
@@ -57,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.navigation_main_activity-> {
+                R.id.navigation_main_activity -> {
 
                     startActivity(Intent(this, MainActivity::class.java))
                     true
