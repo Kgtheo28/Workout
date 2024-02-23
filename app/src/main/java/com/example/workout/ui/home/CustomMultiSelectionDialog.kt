@@ -49,14 +49,12 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
 
 
         addBtn.setOnClickListener {
-            //addData()
-            addData2()
-            //addData3()
+            addData()
 
         }
     }
 
-    private fun addData2() {
+    private fun addData() {
         val checkBoxWorkout1 = binding.checkbox1
         val workoutName1 = binding.workoutName1.text.toString()
         val equipment1 = binding.equipment1.text.toString()
@@ -91,7 +89,6 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
         val workoutName8 = binding.workoutName8.text.toString()
         val equipment8 = binding.equipment8.text.toString()
 
-
         val mondayCheckBox = binding.checkBoxMonday
         val tuesdayCheckBox = binding.checkBoxTuesday
         val wednesdayCheckBox = binding.checkBoxWednesday
@@ -100,15 +97,10 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
         val saturdayCheckBox = binding.checkBoxSarturday
         val sundayCheckBox = binding.checkBoxSunday
 
-        fun addDataForWorkout(workoutName: String, equipment: String, workoutId: Int, weekdayId: Int) {
-            val weekday = Weekday(mondayCheckBox.text.toString(), weekdayId)
-            mUserViewModel.addWeekday(weekday)
+        fun addDataForWorkout(workoutName: String, equipment: String, weekdayName: String) {
 
-            val exercise = Exercise(workoutName, equipment, workoutId)
+            val exercise = Exercise(workoutName, equipment, weekdayName)
             mUserViewModel.addExercise(exercise)
-
-            val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(workoutId, weekdayId, workoutName, equipment)
-            mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
 
             Toast.makeText(this, "Successfully added", Toast.LENGTH_LONG).show()
             startActivity(Intent(this@CustomMultiSelectionDialog, MainActivity::class.java))
@@ -116,41 +108,39 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
 
         if (checkBoxWorkout1.isChecked) {
             if (mondayCheckBox.isChecked) {
-                addDataForWorkout(workoutName1, equipment1, 1, 1)
+                addDataForWorkout(workoutName1, equipment1, mondayCheckBox.text.toString())
             } else if (tuesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName1, equipment1, 1, 2)
+                addDataForWorkout(workoutName1, equipment1, tuesdayCheckBox.text.toString())
             }else if (wednesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName1, equipment1, 1, 3)
+                addDataForWorkout(workoutName1, equipment1, wednesdayCheckBox.text.toString())
             } else if (thursdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName1, equipment1, 1, 4)
+                addDataForWorkout(workoutName1, equipment1, thursdayCheckBox.text.toString())
             }else if (fridayCheckBox.isChecked) {
-                addDataForWorkout(workoutName1, equipment1, 1, 5)
+                addDataForWorkout(workoutName1, equipment1, fridayCheckBox.text.toString())
             }else if (saturdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName1, equipment1, 1, 6)
+                addDataForWorkout(workoutName1, equipment1, saturdayCheckBox.text.toString())
             }else if (sundayCheckBox.isChecked) {
-                addDataForWorkout(workoutName1, equipment1, 1, 7)
+                addDataForWorkout(workoutName1, equipment1, sundayCheckBox.text.toString())
             }
-
             else {
                 Toast.makeText(this, "You need to pick a weekday", Toast.LENGTH_LONG).show()
             }
         }
-
         else if (checkBoxWorkout2.isChecked) {
             if (mondayCheckBox.isChecked) {
-                addDataForWorkout(workoutName2, equipment2, 2, 1)
+                addDataForWorkout(workoutName2, equipment2, mondayCheckBox.text.toString())
             } else if (tuesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName2, equipment2, 2, 2)
-            } else if (wednesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName2, equipment2, 3, 3)
+                addDataForWorkout(workoutName2, equipment2, tuesdayCheckBox.text.toString())
+            }else if (wednesdayCheckBox.isChecked) {
+                addDataForWorkout(workoutName2, equipment2, wednesdayCheckBox.text.toString())
             } else if (thursdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName2, equipment2, 4, 4)
+                addDataForWorkout(workoutName2, equipment2, thursdayCheckBox.text.toString())
             }else if (fridayCheckBox.isChecked) {
-                addDataForWorkout(workoutName2, equipment2, 5, 5)
+                addDataForWorkout(workoutName2, equipment2, fridayCheckBox.text.toString())
             }else if (saturdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName2, equipment2, 6, 6)
+                addDataForWorkout(workoutName2, equipment2, saturdayCheckBox.text.toString())
             }else if (sundayCheckBox.isChecked) {
-                addDataForWorkout(workoutName2, equipment2, 7, 7)
+                addDataForWorkout(workoutName2, equipment2, sundayCheckBox.text.toString())
             }
             else {
                 Toast.makeText(this, "You need to pick a weekday", Toast.LENGTH_LONG).show()
@@ -159,19 +149,19 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
 
         else if (checkBoxWorkout3.isChecked) {
             if (mondayCheckBox.isChecked) {
-                addDataForWorkout(workoutName3, equipment3, 3, 1)
+                addDataForWorkout(workoutName3, equipment3, mondayCheckBox.text.toString())
             } else if (tuesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName3, equipment3, 3, 2)
-            } else if (wednesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName3, equipment3, 3, 3)
+                addDataForWorkout(workoutName3, equipment3, tuesdayCheckBox.text.toString())
+            }else if (wednesdayCheckBox.isChecked) {
+                addDataForWorkout(workoutName3, equipment3, wednesdayCheckBox.text.toString())
             } else if (thursdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName3, equipment3, 3, 4)
+                addDataForWorkout(workoutName3, equipment3, thursdayCheckBox.text.toString())
             }else if (fridayCheckBox.isChecked) {
-                addDataForWorkout(workoutName3, equipment3, 3, 5)
+                addDataForWorkout(workoutName3, equipment3, fridayCheckBox.text.toString())
             }else if (saturdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName3, equipment3, 3, 6)
+                addDataForWorkout(workoutName3, equipment3, saturdayCheckBox.text.toString())
             }else if (sundayCheckBox.isChecked) {
-                addDataForWorkout(workoutName3, equipment3, 3, 7)
+                addDataForWorkout(workoutName3, equipment3, sundayCheckBox.text.toString())
             }
             else {
                 Toast.makeText(this, "You need to pick a weekday", Toast.LENGTH_LONG).show()
@@ -180,19 +170,19 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
 
         else if (checkBoxWorkout4.isChecked) {
             if (mondayCheckBox.isChecked) {
-                addDataForWorkout(workoutName4, equipment4, 4, 1)
+                addDataForWorkout(workoutName4, equipment4, mondayCheckBox.text.toString())
             } else if (tuesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName4, equipment4, 4, 2)
-            } else if (wednesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName4, equipment4, 4, 3)
+                addDataForWorkout(workoutName4, equipment4, tuesdayCheckBox.text.toString())
+            }else if (wednesdayCheckBox.isChecked) {
+                addDataForWorkout(workoutName4, equipment4, wednesdayCheckBox.text.toString())
             } else if (thursdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName4, equipment4, 4, 4)
+                addDataForWorkout(workoutName4, equipment4, thursdayCheckBox.text.toString())
             }else if (fridayCheckBox.isChecked) {
-                addDataForWorkout(workoutName4, equipment4, 4, 5)
+                addDataForWorkout(workoutName4, equipment4, fridayCheckBox.text.toString())
             }else if (saturdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName4, equipment4, 4, 6)
+                addDataForWorkout(workoutName4, equipment4, saturdayCheckBox.text.toString())
             }else if (sundayCheckBox.isChecked) {
-                addDataForWorkout(workoutName4, equipment4, 4, 7)
+                addDataForWorkout(workoutName4, equipment4, sundayCheckBox.text.toString())
             }
             else {
                 Toast.makeText(this, "You need to pick a weekday", Toast.LENGTH_LONG).show()
@@ -201,19 +191,19 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
 
         else if (checkBoxWorkout5.isChecked) {
             if (mondayCheckBox.isChecked) {
-                addDataForWorkout(workoutName5, equipment5, 5, 1)
+                addDataForWorkout(workoutName5, equipment5, mondayCheckBox.text.toString())
             } else if (tuesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName5, equipment5, 5, 2)
-            } else if (wednesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName5, equipment5, 5, 3)
+                addDataForWorkout(workoutName5, equipment5, tuesdayCheckBox.text.toString())
+            }else if (wednesdayCheckBox.isChecked) {
+                addDataForWorkout(workoutName5, equipment5, wednesdayCheckBox.text.toString())
             } else if (thursdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName5, equipment5, 5, 4)
+                addDataForWorkout(workoutName5, equipment5, thursdayCheckBox.text.toString())
             }else if (fridayCheckBox.isChecked) {
-                addDataForWorkout(workoutName5, equipment5, 5, 5)
+                addDataForWorkout(workoutName5, equipment5, fridayCheckBox.text.toString())
             }else if (saturdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName5, equipment5, 5, 6)
+                addDataForWorkout(workoutName5, equipment5, saturdayCheckBox.text.toString())
             }else if (sundayCheckBox.isChecked) {
-                addDataForWorkout(workoutName5, equipment5, 5, 7)
+                addDataForWorkout(workoutName5, equipment5, sundayCheckBox.text.toString())
             }
             else {
                 Toast.makeText(this, "You need to pick a weekday", Toast.LENGTH_LONG).show()
@@ -222,19 +212,19 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
 
         else if (checkBoxWorkout6.isChecked) {
             if (mondayCheckBox.isChecked) {
-                addDataForWorkout(workoutName6, equipment6, 6, 1)
+                addDataForWorkout(workoutName6, equipment6, mondayCheckBox.text.toString())
             } else if (tuesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName6, equipment6, 6, 2)
-            } else if (wednesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName6, equipment6, 6, 3)
+                addDataForWorkout(workoutName6, equipment6, tuesdayCheckBox.text.toString())
+            }else if (wednesdayCheckBox.isChecked) {
+                addDataForWorkout(workoutName6, equipment6, wednesdayCheckBox.text.toString())
             } else if (thursdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName6, equipment6, 6, 4)
+                addDataForWorkout(workoutName6, equipment6, thursdayCheckBox.text.toString())
             }else if (fridayCheckBox.isChecked) {
-                addDataForWorkout(workoutName6, equipment6, 6, 5)
+                addDataForWorkout(workoutName6, equipment6, fridayCheckBox.text.toString())
             }else if (saturdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName6, equipment6, 6, 6)
+                addDataForWorkout(workoutName6, equipment6, saturdayCheckBox.text.toString())
             }else if (sundayCheckBox.isChecked) {
-                addDataForWorkout(workoutName6, equipment6, 6, 7)
+                addDataForWorkout(workoutName6, equipment6, sundayCheckBox.text.toString())
             }
             else {
                 Toast.makeText(this, "You need to pick a weekday", Toast.LENGTH_LONG).show()
@@ -243,19 +233,19 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
 
         else if (checkBoxWorkout7.isChecked) {
             if (mondayCheckBox.isChecked) {
-                addDataForWorkout(workoutName7, equipment7, 7, 1)
+                addDataForWorkout(workoutName7, equipment7, mondayCheckBox.text.toString())
             } else if (tuesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName7, equipment7, 7, 2)
-            } else if (wednesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName7, equipment7, 7, 3)
+                addDataForWorkout(workoutName7, equipment7, tuesdayCheckBox.text.toString())
+            }else if (wednesdayCheckBox.isChecked) {
+                addDataForWorkout(workoutName7, equipment7, wednesdayCheckBox.text.toString())
             } else if (thursdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName7, equipment7, 7, 4)
+                addDataForWorkout(workoutName7, equipment7, thursdayCheckBox.text.toString())
             }else if (fridayCheckBox.isChecked) {
-                addDataForWorkout(workoutName7, equipment7, 7, 5)
+                addDataForWorkout(workoutName7, equipment7, fridayCheckBox.text.toString())
             }else if (saturdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName7, equipment7, 7, 6)
+                addDataForWorkout(workoutName7, equipment7, saturdayCheckBox.text.toString())
             }else if (sundayCheckBox.isChecked) {
-                addDataForWorkout(workoutName7, equipment7, 7, 7)
+                addDataForWorkout(workoutName7, equipment7, sundayCheckBox.text.toString())
             }
             else {
                 Toast.makeText(this, "You need to pick a weekday", Toast.LENGTH_LONG).show()
@@ -264,19 +254,19 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
 
         else if (checkBoxWorkout8.isChecked) {
             if (mondayCheckBox.isChecked) {
-                addDataForWorkout(workoutName8, equipment8, 8, 1)
+                addDataForWorkout(workoutName8, equipment8, mondayCheckBox.text.toString())
             } else if (tuesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName8, equipment8, 8, 2)
-            } else if (wednesdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName8, equipment8, 8, 3)
+                addDataForWorkout(workoutName8, equipment8, tuesdayCheckBox.text.toString())
+            }else if (wednesdayCheckBox.isChecked) {
+                addDataForWorkout(workoutName8, equipment8, wednesdayCheckBox.text.toString())
             } else if (thursdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName8, equipment8, 8, 4)
+                addDataForWorkout(workoutName8, equipment8, thursdayCheckBox.text.toString())
             }else if (fridayCheckBox.isChecked) {
-                addDataForWorkout(workoutName8, equipment8, 8, 5)
+                addDataForWorkout(workoutName8, equipment8, fridayCheckBox.text.toString())
             }else if (saturdayCheckBox.isChecked) {
-                addDataForWorkout(workoutName8, equipment8, 8, 6)
+                addDataForWorkout(workoutName8, equipment8, saturdayCheckBox.text.toString())
             }else if (sundayCheckBox.isChecked) {
-                addDataForWorkout(workoutName8, equipment8, 8, 7)
+                addDataForWorkout(workoutName8, equipment8, sundayCheckBox.text.toString())
             }
             else {
                 Toast.makeText(this, "You need to pick a weekday", Toast.LENGTH_LONG).show()
@@ -287,181 +277,6 @@ open class CustomMultiSelectionDialog: AppCompatActivity() {
             Toast.makeText(this, "You need to pick an Exercise", Toast.LENGTH_LONG).show()
         }
     }
-
-    private fun addData3(){
-
-        val checkBoxWorkout1 = binding.checkbox1
-        val workoutName1 = binding.workoutName1.text.toString()
-        val equipment1 = binding.equipment1.text.toString()
-
-        val checkBoxWorkout2 = binding.checkbox2
-        val workoutName2 = binding.workoutName2.text.toString()
-        val equipment2 = binding.equipment2.text.toString()
-
-        val checkBoxWorkout3 = binding.checkbox3
-        val workoutName3 = binding.workoutName3.text.toString()
-        val equipment3 = binding.equipment3.text.toString()
-
-        val mondayCheckBox = binding.checkBoxMonday
-        val tuesdayCheckBox = binding.checkBoxTuesday
-        val wednesdayCheckBox = binding.checkBoxWednesday
-
-        fun addDataForWorkout(workoutName: String, equipment: String, workoutId: Int, weekdayId: Int) {
-            val weekday = Weekday(mondayCheckBox.text.toString(), weekdayId)
-            mUserViewModel.addWeekday(weekday)
-
-            val exercise = Exercise(workoutName, equipment, workoutId)
-            mUserViewModel.addExercise(exercise)
-
-            val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(workoutId, weekdayId, workoutName, equipment)
-            mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
-
-            Toast.makeText(this, "Successfully added", Toast.LENGTH_LONG).show()
-            startActivity(Intent(this@CustomMultiSelectionDialog, MainActivity::class.java))
-        }
-
-        when(checkBoxWorkout1.isChecked){
-              mondayCheckBox.isChecked -> addDataForWorkout(workoutName1, equipment1, 1, 1)
-            tuesdayCheckBox.isChecked -> addDataForWorkout(workoutName1, equipment1, 1, 2)
-            wednesdayCheckBox.isChecked -> addDataForWorkout(workoutName1, equipment1, 1, 3)
-            else -> {
-                Toast.makeText(this, "You need to pick an Exercise", Toast.LENGTH_LONG).show()
-            }
-        }
-
-        when(checkBoxWorkout2.isChecked){
-            mondayCheckBox.isChecked -> addDataForWorkout(workoutName2, equipment2, 2, 1)
-            tuesdayCheckBox.isChecked -> addDataForWorkout(workoutName2, equipment2, 2, 2)
-            wednesdayCheckBox.isChecked -> addDataForWorkout(workoutName2, equipment2, 2, 3)
-            else -> {
-                Toast.makeText(this, "You need to pick an Exercise", Toast.LENGTH_LONG).show()
-            }
-        }
-    }
-
-    /*
-
-    private fun addData() {
-        // First workout properties
-        val checkBoxWorkout1 = binding.checkbox1
-        val workoutName = binding.workoutName1.text.toString()
-        val equipment = binding.equipment1.text.toString()
-
-        // Second Workout Properties
-        val checkBoxWorkout2 = binding.checkbox2
-        val workoutName2 = binding.workoutName2.text.toString()
-        val equipment2 = binding.equipment2.text.toString()
-
-        // Weekday Check Boxes
-        val mondayCheckBox = binding.checkBoxMonday
-        val tuesdayCheckBox = binding.checkBoxTuesday
-
-        // If First Workout is Selected
-        if(checkBoxWorkout1.isChecked){
-
-            if(mondayCheckBox.isChecked){
-
-                //adding Weekday to database
-                val weekday = Weekday(mondayCheckBox.text.toString(), 1)
-
-                mUserViewModel.addWeekday(weekday)
-
-                // Adding Exercise to database
-                val exercise = Exercise(workoutName, equipment, 1)
-
-                mUserViewModel.addExercise(exercise)
-
-                // Adding Cross reference to the two columns
-                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(1,1)
-                mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
-
-                // Moving to the Main Activity after the process is done
-                Toast.makeText(this, "Successfully added in Monday", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this@CustomMultiSelectionDialog, MainActivity::class.java))
-
-            }
-
-            else if(tuesdayCheckBox.isChecked){
-                //adding Weekday to database
-                val weekday = Weekday(tuesdayCheckBox.text.toString(), 2)
-
-                mUserViewModel.addWeekday(weekday)
-
-                // Adding Exercise to database
-                val exercise = Exercise(workoutName, equipment, 1)
-
-                mUserViewModel.addExercise(exercise)
-
-                // Adding Cross reference to the two columns
-                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(1,2)
-                mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
-
-                // Moving to the Main Activity after the process is done
-                Toast.makeText(this, "Successfully  in Tuesday", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this@CustomMultiSelectionDialog, MainActivity::class.java))
-            }
-
-            else {
-                Toast.makeText(this, "you need to pick a weekday", Toast.LENGTH_LONG).show()
-            }
-        }
-        // Second Workout
-        else if(checkBoxWorkout2.isChecked){
-
-            if(mondayCheckBox.isChecked){
-
-                //adding Weekday to database
-                val weekday = Weekday(mondayCheckBox.text.toString(), 1)
-
-                mUserViewModel.addWeekday(weekday)
-
-                // Adding Exercise to database
-                val exercise = Exercise(workoutName2, equipment2, 2)
-
-                mUserViewModel.addExercise(exercise)
-
-                // Adding Cross reference to the two columns
-                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(2,1)
-                mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
-
-                // Moving to the Main Activity after the process is done
-                Toast.makeText(this, "Successfully added in Monday", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this@CustomMultiSelectionDialog, MainActivity::class.java))
-
-            }
-
-            else if(tuesdayCheckBox.isChecked){
-                //adding Weekday to database
-                val weekday = Weekday(tuesdayCheckBox.text.toString(), 2)
-
-                mUserViewModel.addWeekday(weekday)
-
-                // Adding Exercise to database
-                val exercise = Exercise(workoutName2, equipment2, 2)
-
-                mUserViewModel.addExercise(exercise)
-
-                // Adding Cross reference to the two columns
-                val exerciseWeekdayCrossRef = ExerciseWeekdayCrossRef(2,2)
-                mUserViewModel.addCrossRef(exerciseWeekdayCrossRef)
-
-                // Moving to the Main Activity after the process is done
-                Toast.makeText(this, "Successfully  in Tuesday", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this@CustomMultiSelectionDialog, MainActivity::class.java))
-            }
-
-            else {
-                Toast.makeText(this, "you need to pick a weekday", Toast.LENGTH_LONG).show()
-            }
-
-
-        }else{
-            Toast.makeText(this, "you need to pick an Exercise", Toast.LENGTH_LONG).show()
-        }
-
-    }
-
-     */
 
 }
 

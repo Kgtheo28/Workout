@@ -1,5 +1,6 @@
 package com.example.workout
 
+import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.view.Window
@@ -11,7 +12,11 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.workout.activities.ExerciseActivity
+import com.example.workout.activities.NutritionActivity
+import com.example.workout.activities.ProfileActivity
 import com.example.workout.databinding.ActivityMainBinding
+import com.example.workout.ui.home.CustomMultiSelectionDialog
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,6 +32,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.weeklyCalender.setOnClickListener {
+            startActivity(Intent(this@MainActivity, CustomMultiSelectionDialog::class.java))
+            finish()
+        }
+
+        /*
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -39,5 +50,34 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+         */
+
+        val bottomNavigationView: BottomNavigationView = findViewById(R.id.nav_view)
+
+        bottomNavigationView.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.navigation_main_activity-> {
+
+                    startActivity(Intent(this, MainActivity::class.java))
+                    true
+                }
+                R.id.navigation_exercise_activity -> {
+
+                    startActivity(Intent(this, ExerciseActivity::class.java))
+                    true
+                }
+                R.id.navigation_profile_activity -> {
+                    startActivity(Intent(this, ProfileActivity::class.java))
+                    true
+                }
+                R.id.navigation_nutrition_activity -> {
+                    startActivity(Intent(this, NutritionActivity::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
+
     }
 }

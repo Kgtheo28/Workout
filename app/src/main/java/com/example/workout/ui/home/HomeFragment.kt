@@ -1,6 +1,5 @@
 package com.example.workout.ui.home
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,14 +10,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.workout.MainActivity
 import com.example.workout.R
 import com.example.workout.database.ExerciseViewModel
 import com.example.workout.databinding.FragmentHomeBinding
-import com.example.workout.ui.calender.HomeCalenderAdaptor
 import com.example.workout.ui.home.Adapter.ExerciseAdapter
-import com.example.workout.ui.notifications.ListAdapter
 
 class HomeFragment : Fragment() {
 
@@ -41,7 +36,7 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
+        // remove val root input setcontentview
 
         binding.weeklyCalender.setOnClickListener {
             //val customDialog = CustomMultiSelectionDialog(context)

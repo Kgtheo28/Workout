@@ -39,40 +39,41 @@ open class DashboardFragment : Fragment() {
 
         binding.addButton1.setOnClickListener {
             //findNavController().navigate(R.id.action_navigation_dashboard_to_addExerciseFragment)
-            insertData()
+            //insertData()
         }
 
         binding.buttonAdd2.setOnClickListener {
-            insertData2()
+            //insertData2()
         }
 
         binding.addButton3.setOnClickListener {
-            insertData3()
+            //insertData3()
         }
 
         binding.addButton4.setOnClickListener {
-            insertData4()
+            //insertData4()
         }
 
         binding.addButton5.setOnClickListener {
-            insertData5()
+            //insertData5()
         }
 
         binding.addButton6.setOnClickListener {
-            insertData6()
+            //insertData6()
         }
 
         binding.addButton7.setOnClickListener {
-            insertData7()
+            //insertData7()
         }
 
         binding.addButton8.setOnClickListener {
-            insertData8()
+            //insertData8()
         }
 
         return root
     }
 
+    /*
     private fun insertData() {
         val bodyPart = binding.workoutName1.text.toString()
         val exerciseName = binding.equipment1.text.toString()
@@ -162,9 +163,5 @@ open class DashboardFragment : Fragment() {
         findNavController().navigate(R.id.action_navigation_dashboard_to_navigation_notifications)
     }
 
-
-
-
-
-
+     */
 }

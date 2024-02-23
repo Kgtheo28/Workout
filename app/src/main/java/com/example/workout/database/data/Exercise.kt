@@ -9,6 +9,7 @@ import androidx.room.Relation
 data class Exercise(
     val bodyPart: String,
     val exerciseName: String,
+    val weekdayName: String,
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
 
@@ -18,7 +19,6 @@ data class Exercise(
 @Entity(tableName = "weekday_table")
 data class Weekday(
     val weekdayName: String,
-
     @PrimaryKey(autoGenerate = true)
     val weekdayId : Int,
 
