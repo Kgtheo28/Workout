@@ -15,19 +15,3 @@ data class Exercise(
 
 
 )
-
-@Entity(tableName = "weekday_table")
-data class Weekday(
-    val weekdayName: String,
-    @PrimaryKey(autoGenerate = true)
-    val weekdayId : Int,
-
-)
-
-@Entity(tableName = "exercise_weekday_cross", primaryKeys = ["id", "weekdayId"])
-data class ExerciseWeekdayCrossRef(
-    val id: Int,
-    val weekdayId: Int,
-    val exerciseName: String,
-    val equipment: String
-)

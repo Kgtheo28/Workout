@@ -7,14 +7,11 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.workout.R
 import com.example.workout.database.data.Exercise
-import com.example.workout.database.data.ExerciseWeekdayCrossRef
-import com.example.workout.database.data.databases.ExerciseWithWeekday
-import com.example.workout.database.data.databases.WeekdayWIthExercise
 
 // ExerciseAdapter.kt
 class ExerciseAdapter: RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>() {
 
-    private var exerciseList = emptyList<ExerciseWeekdayCrossRef>()
+    private var exerciseList = emptyList<Exercise>()
 
     class ExerciseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     }
@@ -40,7 +37,7 @@ class ExerciseAdapter: RecyclerView.Adapter<ExerciseAdapter.ExerciseViewHolder>(
 
     override fun getItemCount() = exerciseList.size
 
-    fun setData(exercise: List<ExerciseWeekdayCrossRef>){
+    fun setData(exercise: List<Exercise>){
         this.exerciseList = exercise
         notifyDataSetChanged()
     }

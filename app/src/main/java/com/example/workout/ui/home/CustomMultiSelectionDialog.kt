@@ -20,11 +20,7 @@ import com.example.workout.MainActivity
 import com.example.workout.R
 import com.example.workout.database.ExerciseViewModel
 import com.example.workout.database.data.Exercise
-import com.example.workout.database.data.ExerciseWeekdayCrossRef
-import com.example.workout.database.data.Weekday
 import com.example.workout.databinding.ActivityCustomMultiSelectionDialogBinding
-import com.example.workout.databinding.ActivityMainBinding
-import com.example.workout.ui.dashboard.DashboardFragment
 import java.io.ByteArrayOutputStream
 
 open class CustomMultiSelectionDialog: AppCompatActivity() {

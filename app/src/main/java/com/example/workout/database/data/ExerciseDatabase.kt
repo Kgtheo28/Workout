@@ -8,14 +8,10 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [
-        Exercise::class,
-        Weekday::class,
-        ExerciseWeekdayCrossRef::class], version = 1, exportSchema = false)
+        Exercise::class], version = 1, exportSchema = false)
 abstract class ExerciseDatabase: RoomDatabase() {
 
     abstract fun exerciseDao(): ExerciseDao
-    abstract fun weekdayDao(): WeekdayDao
-    abstract fun exerciseWeekdayCrossRefDao(): ExerciseWeekdayCrossRefDao
 
     companion object {
         @Volatile
@@ -30,7 +26,7 @@ abstract class ExerciseDatabase: RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     ExerciseDatabase::class.java,
-                    "exercise_database3"
+                    "exercise_database4"
                 ).build()
                 INSTANCE= instance
                 return instance
