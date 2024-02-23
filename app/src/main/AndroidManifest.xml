@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Workout"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ExerciseSelectionActivity"
+            android:exported="false" />
+        <activity
             android:name=".activities.NutritionActivity"
             android:exported="false" />
         <activity
@@ -22,13 +25,7 @@
             android:name=".activities.ExerciseActivity"
             android:exported="false" />
         <activity
-            android:name=".PersonalDisplayActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.ExerciseActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.home.CustomMultiSelectionDialog"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"

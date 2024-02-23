@@ -39,7 +39,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view">
 
 
         <TextView
@@ -87,12 +89,12 @@
             android:id="@+id/calender_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView14"
             android:layout_margin="5dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="15dp"
-            app:cardElevation="10dp">
+            app:cardElevation="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -103,8 +105,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="144dp"
-                    android:text="Weekly"
                     android:gravity="center"
+                    android:text="Weekly"
                     android:textColor="@color/blue"
                     android:textSize="30sp"
                     android:textStyle="bold"
@@ -115,9 +117,9 @@
                     android:id="@+id/month_layout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/weekly_calender">
 
@@ -125,12 +127,12 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="back"
                         android:gravity="center"
-                        android:textColor="@color/blue"
-                        android:textStyle="bold"
                         android:onClick="previousSelection"
-                        android:textSize="20sp" />
+                        android:text="back"
+                        android:textColor="@color/blue"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tv_month_year"
@@ -138,21 +140,21 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="2"
                         android:text="JAN 2024"
-                        android:textSize="20sp"
-                        android:textStyle="bold"
                         android:textAlignment="center"
-                        android:textColor="@color/black" />
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:gravity="center"
+                        android:onClick="nextSelection"
                         android:text="next"
                         android:textColor="@color/blue"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        android:onClick="nextSelection"
-                        android:textSize="20sp" />
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -169,9 +171,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="SUN"
-                        android:textColor="@color/grey"
                         android:textAlignment="center"
-                        android:textSize="15sp"/>
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/mondayBtn"
@@ -179,9 +181,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="MON"
-                        android:textColor="@color/grey"
                         android:textAlignment="center"
-                        android:textSize="15sp"/>
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/tuesdayBtn"
@@ -189,9 +191,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="TUE"
-                        android:textColor="@color/grey"
                         android:textAlignment="center"
-                        android:textSize="15sp"/>
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/wednesdayBtn"
@@ -199,9 +201,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="WED"
-                        android:textColor="@color/grey"
                         android:textAlignment="center"
-                        android:textSize="15sp"/>
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/thursdayBtn"
@@ -209,9 +211,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="THU"
-                        android:textColor="@color/grey"
                         android:textAlignment="center"
-                        android:textSize="15sp"/>
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/fridayBtn"
@@ -219,9 +221,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="FRI"
-                        android:textColor="@color/grey"
                         android:textAlignment="center"
-                        android:textSize="15sp"/>
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
                     <TextView
                         android:id="@+id/saturdayBtn"
@@ -229,9 +231,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="SAT"
-                        android:textColor="@color/grey"
                         android:textAlignment="center"
-                        android:textSize="15sp"/>
+                        android:textColor="@color/grey"
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -249,25 +251,22 @@
                         android:id="@+id/calender_recyclerView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:clipToPadding="false"/>
+                        android:clipToPadding="false" />
 
 
                 </androidx.core.widget.NestedScrollView>
-
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
 
-
-
         <TextView
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
             android:layout_marginLeft="5dp"
+            android:layout_marginTop="25dp"
             android:gravity="center"
             android:text="Work out Sections"
             android:textColor="@color/black"
@@ -280,8 +279,8 @@
             android:id="@+id/textView19"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginRight="5dp"
+            android:gravity="center"
             android:text="Take Your Class"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/textView18"
@@ -289,14 +288,13 @@
             app:layout_constraintTop_toTopOf="@+id/textView18" />
 
 
-
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView2"
             android:layout_width="match_parent"
             android:layout_height="1in"
-            android:scrollbars="none"
-            android:overScrollMode="never"
             android:layout_marginTop="10dp"
+            android:overScrollMode="never"
+            android:scrollbars="none"
             app:layout_constraintTop_toBottomOf="@+id/textView19"
             tools:layout_editor_absoluteX="10dp">
 
@@ -545,9 +543,9 @@
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="25dp"
             android:gravity="center"
-            android:layout_marginLeft="5dp"
             android:text="Weekly Workout Schedule"
             android:textColor="@color/black"
             android:textSize="14sp"
@@ -558,10 +556,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="See All"
             android:layout_marginRight="5dp"
             android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="See All"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="@+id/tv1"
             app:layout_constraintEnd_toEndOf="parent"
@@ -573,9 +571,9 @@
             android:id="@+id/cardView5"
             android:layout_width="match_parent"
             android:layout_height="0.5in"
+            android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="10dp"
             app:cardElevation="5dp"

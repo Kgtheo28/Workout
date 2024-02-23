@@ -6,7 +6,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.workout.R
 import com.example.workout.databinding.ActivityMainBinding
-import com.example.workout.ui.home.CustomMultiSelectionDialog
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,25 +22,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.weeklyCalender.setOnClickListener {
-            startActivity(Intent(this@MainActivity, CustomMultiSelectionDialog::class.java))
+            startActivity(Intent(this@MainActivity, ExerciseSelectionActivity::class.java))
             finish()
         }
 
-        /*
-        val navView: BottomNavigationView = binding.navView
 
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.profileFragment, R.id.navigation_nutrition
-            )
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
-
-         */
 
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.nav_view)
 
