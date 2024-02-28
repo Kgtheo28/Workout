@@ -50,19 +50,6 @@ class ExerciseViewModel(application: Application): AndroidViewModel(application)
         }
     }
 
-
-    fun updateExercise(exercise: Exercise) {
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.updateExercise(exercise)
-        }
-    }
-
-    fun deleteExercise(exercise: Exercise) {
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.deleteExercise(exercise)
-        }
-    }
-
     fun deleteAllExercise() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.deleteAllExercise()
