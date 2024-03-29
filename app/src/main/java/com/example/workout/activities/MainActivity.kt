@@ -12,7 +12,7 @@ import com.example.workout.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var ExerciseViewModel: ExerciseViewModel
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        ExerciseViewModel = ViewModelProvider(this).get(ExerciseViewModel::class.java)
+
 
         binding.weeklyCalender.setOnClickListener {
             startActivity(Intent(this@MainActivity, ExerciseSelectionActivity::class.java))
@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        // TODO rmove the findViewBYId an put Binding
-        val bottomNavigationView: BottomNavigationView = findViewById(R.id.nav_view)
+        // TODO remove the findViewBYId an put Binding
+        val bottomNavigationView: BottomNavigationView = binding.navView
 
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {

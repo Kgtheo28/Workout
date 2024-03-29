@@ -29,6 +29,7 @@ interface ExerciseDao {
 
     //filtering data by weekday
 
+    /*
     @Query("SELECT * FROM workout_table WHERE weekdayName = 'Monday'")
     fun readMondayData(): LiveData<List<Exercise>>
 
@@ -50,6 +51,5 @@ interface ExerciseDao {
     @Query("SELECT * FROM workout_table WHERE weekdayName = 'Sunday'")
     fun readSundayData(): LiveData<List<Exercise>>
 
-
-
+     */
 }
