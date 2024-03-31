@@ -12,6 +12,4 @@ data class Exercise(
     val weekdayName: String,
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-
-
 )

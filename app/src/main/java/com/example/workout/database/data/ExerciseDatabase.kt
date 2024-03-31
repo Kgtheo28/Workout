@@ -13,6 +13,7 @@ abstract class ExerciseDatabase: RoomDatabase() {
 
     abstract fun exerciseDao(): ExerciseDao
 
+    /*
     companion object {
         @Volatile
         private var INSTANCE: ExerciseDatabase? = null
@@ -33,4 +34,6 @@ abstract class ExerciseDatabase: RoomDatabase() {
             }
         }
     }
+
+     */
 }
